@@ -1,0 +1,32 @@
+{
+  "name": "mf-intelligence-backend",
+  "version": "1.0.0",
+  "description": "Enterprise Mutual Fund Intelligence Platform - API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node src/seeders/seedRoles.js",
+    "reset": "node -e \"try{require('fs').unlinkSync('dev.sqlite')}catch(e){}\" && npm run seed"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.10.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "sqlite3": "^5.1.7"
+  }
+}
